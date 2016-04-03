@@ -44,4 +44,4 @@ print(record['Count'])
 ## método porque la lista de IDs que generamos nos va a servir para
 ## bajar los record completos usando el método .efetch().
 
-
+#Referencia: http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc2
