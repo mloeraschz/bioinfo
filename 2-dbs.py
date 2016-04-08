@@ -30,7 +30,7 @@
 ## Vamos a empezar obteniendo info acerca de las bases de datos:
 
 from Bio import Entrez
-Entrez.email = "bio.mloera@gmail.com"
+Entrez.email = "email"
 handle = Entrez.einfo()
 result = handle.read()
 print(result)
