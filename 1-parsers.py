@@ -91,3 +91,24 @@ print(seq_record.name)
 print(seq_record.description)
 print(seq_record.seq)
 print(seq_record.annotations["keywords"])
+
+## 1.5 Escribiendo archivos fasta
+
+## BioPython permite escribir archivos fasta a partir de objetos Seq de manera muy sencilla:
+
+from Bio import SeqIO
+from Bio import Alphabet
+from Bio.Alphabet import generic_dna
+from Bio.SeqRecord import SeqRecord
+from Bio.Seq import Seq
+
+
+misSeqs = ['ATTATATAGAAT','ATATATA','TTTATATATAT']
+records=[]
+for (index, seq) in enumerate(misSeqs):
+    records.append(SeqRecord(Seq(seq, generic_dna), str(index),description='Secuencia'+str(index),))
+print(records)
+
+SeqIO.write(records,'output.fasta','fasta')
+
+
