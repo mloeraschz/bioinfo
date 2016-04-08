@@ -6,7 +6,7 @@
 ## Por ejemplo, hagamos una búsqueda en PubMed:
 
 from Bio import Entrez
-Entrez.email = "bio.mloera@gmail.com" # No olvides escribir tu email
+Entrez.email = "email" # No olvides escribir tu email
 handle = Entrez.esearch(db='pubmed',term='synthetic biology', reldate=60,retmax=100,datetype='pdat')
 record = Entrez.read(handle)
 print(record.keys())
