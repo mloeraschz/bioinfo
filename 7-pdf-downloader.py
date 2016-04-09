@@ -1,7 +1,7 @@
 from Bio import Entrez
 import sys
 Entrez.email = "email"
-
+# Bajador de PDFs de PMC: LOW THROUGHPUT (MENOS DE 20 IDs)
 handle = Entrez.esearch(db='pmc',term='synthetic biology', reldate=60,retmax=10,datetype='pdat')
 record = Entrez.read(handle)
 print(record['IdList'])
