@@ -44,3 +44,14 @@ print(m.counts)
 print(m.counts['V'])
 print(m.consensus)
 
+## Ahora vamos a intentar con secuencias nucleotídicas. En este tipo de secuencias
+## es posible aplicar el método .degenerate_consensus.
+
+secs = [Seq('ATTATATG'),Seq('ATTTTATG'),Seq('ATTAAATG'),Seq('ATTATATG'),Seq('ATGGCATG'),Seq('ATTGTATG'),Seq('ATAGAGTG'),Seq('CCATATAG'),Seq('ATTATATG'),Seq('ATTATATC')]
+
+m = motifs.create(secs)
+print(m.counts)
+print(m.consensus)
+print(m.degenerate_consensus)
+
+
