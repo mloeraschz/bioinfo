@@ -5,7 +5,7 @@ from os.path import isfile, join
 import os
 import sys
 
-query = 'C:\\Users\\Miguel\\Documents\\Master_thesis\\Thesis\\LAB\\mafia-files\\M-M\\ORF_ANALYSIS\\CDD'
+query = 'C:\\ubicacion' ## aquí escribe la ubicación de tus xmls
 
 xmls = [ join(query,f)for f in listdir(query) if isfile(join(query,f)) ]
 
