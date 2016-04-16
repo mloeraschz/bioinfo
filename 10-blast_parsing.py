@@ -33,7 +33,7 @@ for xml in xmls:
 					pass
 
 ## RETO 0: haz blastp para el archivo fasta de proteinas
-## RETO 1: filtra los xmls de tal manera que solamente se impriman los hits con Evalue <= 1E-5
+## RETO 1: filtra los xmls de tal manera que solamente se impriman los hits con Evalue <= 1E-15
 ## RETO 2: genera un reporte en formato csv para cada
 ## proteina, donde haya columnas para: Query name, Hit ID y Evalue
 ## RETO 3: Automatiza este script usando la biblioteca sys, para que el usuario pueda correrlo desde la línea de comandos
