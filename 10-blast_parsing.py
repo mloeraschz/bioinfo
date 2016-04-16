@@ -32,7 +32,7 @@ for xml in xmls:
 				except TypeError:
 					pass
 
-## RETO 0: haz delta_blast para el archivo fasta de proteinas
+## RETO 0: haz blastp para el archivo fasta de proteinas
 ## RETO 1: filtra los xmls de tal manera que solamente se impriman los hits con Evalue <= 1E-5
 ## RETO 2: genera un reporte en formato csv para cada
 ## proteina, donde haya columnas para: Query name, Hit ID y Evalue
