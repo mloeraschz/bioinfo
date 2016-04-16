@@ -54,4 +54,41 @@ print(m.counts)
 print(m.consensus)
 print(m.degenerate_consensus)
 
+## **************************
+# -*- encoding: utf-8 -*-
 
+from Bio import AlignIO
+from Bio.Seq import Seq
+from Bio import Alphabet
+from Bio.Alphabet import IUPAC, Gapped
+from Bio.SeqRecord import SeqRecord
+
+handle = AlignIO.parse('clustalw_output.aln','clustal')
+
+zoom = []
+
+for ali in handle:
+	
+	#print(ali[:,30:50])
+	for elemento in ali:
+		print(elemento.id)
+		#print(elemento.seq[30:50])
+		sec = str(elemento.seq[30:50])
+		if '-' in sec:
+			pass
+		else:
+
+			zoom.append(Seq(sec,IUPAC.protein))
+
+
+from Bio import Motif
+m = Motif.Motif(alphabet=IUPAC.protein)
+
+for sec in zoom:
+	m.add_instance(Seq(str(sec),m.alphabet))
+	
+
+
+print(m.pwm()) # 
+
+print(m.consensus())
